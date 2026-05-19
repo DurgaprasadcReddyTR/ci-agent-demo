@@ -10,3 +10,6 @@ def is_admin(user):
         return False
     return user.get("role") == "admin"
 
+def format_user_name(user):
+    return user["name"] + " (" + user["role"] + ")"
+

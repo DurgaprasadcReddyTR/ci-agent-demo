@@ -3,7 +3,7 @@ def get_user(user_id):
         1: {"name": "Venkatesh", "role": "developer"},
         2: {"name": "Priya",     "role": "devops"}
     }
-    return users[user_id]
+    return users.get(user_id)
 
 def is_admin(user):
     if not user:

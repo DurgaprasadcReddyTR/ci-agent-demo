@@ -3,7 +3,7 @@ def get_user(user_id):
         1: {"name": "Venkatesh", "role": "developer"},
         2: {"name": "Priya",     "role": "devops"}
     }
-    return users[user_id]
+    return users.get(user_id)
 
 def is_admin(user):
     if not user:
@@ -11,5 +11,5 @@ def is_admin(user):
     return user.get("role") == "admin"
 
 def format_user_name(user):
-    return user["name"].upper() + " (" + user["role"] + ")"
+    return user["name"] + " (" + user["role"] + ")"
 
